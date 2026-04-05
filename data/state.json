@@ -1,7 +1,5 @@
 {
-  "city": "Berlin",
-  "lat": 52.52,
-  "lon": 13.405,
-  "label": "Berlin, Deutschland",
-  "lastUpdated": "2026-04-05T16:32:17.683Z"
+  "cities": [
+    { "name": "Berlin", "country": "DE", "lat": 52.52, "lon": 13.41 }
+  ]
 }

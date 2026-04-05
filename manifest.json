@@ -1,13 +1,13 @@
 {
-  "name": "Weather",
+  "name": "Weather Light",
   "icon": "🌤",
-  "color": "#1a3a5c",
-  "description": "Aktuelles Wetter und 7-Tage-Vorhersage mit Open-Meteo",
+  "color": "#1a2a3d",
+  "description": "Leichte Wetter-App mit Open-Meteo API — Städte suchen, aktuelle Werte und 5-Tage-Vorhersage",
   "inputs": [
-    { "id": "location", "desc": "Standort empfangen (city, lat/lon)" }
+    { "id": "city", "desc": "Stadtname zum automatischen Hinzufügen" }
   ],
   "outputs": [
-    { "id": "weather", "desc": "Aktuelles Wetter senden (temperature, condition, humidity, wind)" }
+    { "id": "cities", "desc": "Alle Städte mit aktuellem Wetter" }
   ],
   "dataFiles": ["state"],
   "pulseSubscriptions": []
