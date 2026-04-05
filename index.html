@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather app light</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#0d0d14; color:#e0e0e0; padding:20px; min-height:100vh; }
+h1 { font-size:20px; margin-bottom:8px; }
+p { color:#888; font-size:13px; margin-bottom:20px; }
+.card { background:#1a1a2e; border-radius:8px; padding:16px; margin-bottom:12px; border:1px solid #2a2a3e; }
+button { background:#4ecdc4; color:#0d0d14; border:none; padding:8px 16px; border-radius:6px; cursor:pointer; font-weight:600; }
+button:hover { opacity:0.9; }
+input, textarea { width:100%; padding:8px; background:#13131f; border:1px solid #2a2a3e; border-radius:6px; color:#e0e0e0; font-size:13px; margin-bottom:8px; }
+</style>
+</head>
+<body>
+<h1>Weather app light</h1>
+<p>Eine neue PulseOS App</p>
+<div class="card">
+  <p>Diese App wurde mit dem PulseOS App-Builder erstellt.</p>
+  <p style="margin-top:8px;">Bearbeite <code>apps/weather-app-light/index.html</code> um sie anzupassen.</p>
+</div>
+<script>
+// PulseOS SDK (automatisch verfuegbar):
+// PulseOS.saveState(data)     - Zustand speichern (PUT /app/weather-app-light/api/state)
+// PulseOS.loadState()         - Zustand laden (GET /app/weather-app-light/api/state)
+// PulseOS.emit(name, data)    - Output an Graph senden
+// PulseOS.onInput(name, cb)   - Input von Graph empfangen
+// PulseOS.onDataChanged(cb)   - Reagiere auf externe Datenänderungen
+// PulseOS.alert(msg)          - Zeige Alert in Agent-Bar
+
+// Graph-Integration: Empfange Daten von anderen Apps
+if (window.PulseOS) {
+  PulseOS.onInput('data', function(incoming) {
+    console.log('Received graph input:', incoming);
+  });
+  PulseOS.onDataChanged(function() {
+    console.log('Data changed externally, reloading...');
+  });
+}
+</script>
+</body>
+</html>
