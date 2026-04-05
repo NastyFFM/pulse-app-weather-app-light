@@ -1,0 +1,12 @@
+{
+  "name": "pulse-app-weather-app-light",
+  "version": "1.0.0",
+  "description": "Weather app for PulseOS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

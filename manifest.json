@@ -1,22 +1,14 @@
 {
-  "name": "Weather app light",
-  "icon": "W",
-  "color": "#1a2a3a",
-  "description": "",
+  "name": "Weather",
+  "icon": "🌤",
+  "color": "#1a3a5c",
+  "description": "Aktuelles Wetter und 7-Tage-Vorhersage mit Open-Meteo",
   "inputs": [
-    {
-      "id": "data",
-      "desc": "Beliebige Daten empfangen"
-    }
+    { "id": "location", "desc": "Standort empfangen (city, lat/lon)" }
   ],
   "outputs": [
-    {
-      "id": "state",
-      "desc": "Aktueller App-Zustand"
-    }
+    { "id": "weather", "desc": "Aktuelles Wetter senden (temperature, condition, humidity, wind)" }
   ],
-  "dataFiles": [
-    "state"
-  ],
+  "dataFiles": ["state"],
   "pulseSubscriptions": []
 }
